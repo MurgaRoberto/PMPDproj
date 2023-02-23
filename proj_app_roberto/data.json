@@ -1,0 +1,49 @@
+
+"nombre":"",
+"direccion":"",
+"descripcion":"",
+"img":"",
+"latitud":"",
+"longitud":""
+
+
+{
+    "bares":[
+        {
+            "nombre":"Txirrintxa",
+            "direccion":"C. de la Estafeta, 87, 31001 Pamplona, Navarra",
+            "descripcion":"Jamones colgados decoran esta clásica taberna con cerveza de elaboración propia más tapas y raciones.",
+            "img":"bares/txirrintxa.jpg",
+            "latitud":"",
+            "longitud":""
+        },
+        {
+            "nombre":"Iruñazarra",
+            "direccion":"C. Mercaderes, 15, 31001 Pamplona, Navarra",
+            "descripcion":"Tapas, carne y pescado en un restaurante ecléctico con paredes de ladrillo visto y pinchos expuestos en la barra",
+            "img":"bares/irunazarra.jpg",
+            "latitud":"",
+            "longitud":""
+        },
+        {
+            "nombre":"Chez Belagua",
+            "direccion":"C. de la Estafeta, 49, 31001 Pamplona, Navarra",
+            "img":"bares/chezBelagua.jpg",
+            "descripcion":"Pinchos, menús y helados en una desenfadada tasca con kupelas y una gran lámpara hecha con botellas de sidra.",
+            "latitud":"",
+            "longitud":""
+        }
+        
+    ],
+
+    "hoteles":[
+        {
+            "nombre":"Hotel la Perla",
+            "direccion":"Plaza del castillo, nº1, Pamplona, Navarra",
+            "descripcion":"Este hotel refinado, ubicado en un edificio elegante del siglo XIX en la esquina de la plaza del Castillo, se encuentra a 4 minutos a pie de la catedral de Pamplona y a 2 km de la estación de trenes de Pamplona.",
+            "img":"hoteles/laPerla.jpg",
+            "latitud":"",
+            "longitud":""
+        }
+    ]
+}

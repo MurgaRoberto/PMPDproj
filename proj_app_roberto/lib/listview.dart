@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proj_app_roberto/screens/bares.dart';
+import 'package:proj_app_roberto/screens/hoteles.dart';
+import 'package:proj_app_roberto/screens/restaurantes.dart';
 
 class ListViewScreen extends StatelessWidget {
   const ListViewScreen({super.key});
@@ -8,14 +10,14 @@ class ListViewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bares, hoteles y restaurantes'),
+        title: const Text('¿Qué necesitas?'),
       ),
       body: Center(
         child: ListView(
           children: const [
-            ListItemWidget(icon: Icon(Icons.west_sharp), text: 'Bares', link: BaresScreen()),
-            /*ListItemWidget(icon: Icon(Icons.west_sharp), text: 'Restaurantes', link: ),*/
-            /*ListItemWidget(icon: Icon(Icons.west_sharp), text: 'Hoteles', link: ),*/
+            ListItemWidget(icon: Icon(Icons.sports_bar), text: 'Bares', link: BaresScreen()),
+            ListItemWidget(icon: Icon(Icons.local_hotel_rounded), text: 'Hoteles', link: HotelesScreen()),
+            ListItemWidget(icon: Icon(Icons.local_restaurant_rounded), text: 'Restaurantes', link: RestaurantesScreen()),
           ],
         ),
       ),
