@@ -1,12 +1,3 @@
-
-"nombre":"",
-"direccion":"",
-"descripcion":"",
-"img":"",
-"latitud":"",
-"longitud":""
-
-
 {
     "bares":[
         {
@@ -30,6 +21,22 @@
             "direccion":"C. de la Estafeta, 49, 31001 Pamplona, Navarra",
             "img":"bares/chezBelagua.jpg",
             "descripcion":"Pinchos, menús y helados en una desenfadada tasca con kupelas y una gran lámpara hecha con botellas de sidra.",
+            "latitud":"",
+            "longitud":""
+        },
+        {
+            "nombre":"Bar Cervecería la Estafeta",
+            "direccion":"C. de la Estafeta, 54, 31001 Pamplona, Navarra",
+            "img":"",
+            "descripcion":"Pintxos tradicionales en taberna rústica con vigas vistas y arcos más azulejos con imágenes de Pamplona.",
+            "latitud":"",
+            "longitud":""
+        },
+        {
+            "nombre":"Bar Fitero Taberna",
+            "direccion":"C. de la Estafeta, 58, 31001 Pamplona, Navarra",
+            "img":"",
+            "descripcion":"Alta cocina navarra en miniatura y fritos en clásico bar de ambiente taurino y familiar abierto en 1956.",
             "latitud":"",
             "longitud":""
         }

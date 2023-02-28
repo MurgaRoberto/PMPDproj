@@ -17,9 +17,17 @@ class BaresScreen extends StatelessWidget {
         
         children: const [
           GlobalCard(name: 'Txirrintxa', dir: 'C. de la Estafeta, 87, 31001 Pamplona, Navarra', img: 'bares/txirrintxa.jpg', desc: 'Jamones colgados decoran esta clásica taberna con cerveza de elaboración propia más tapas y raciones.',),
+
+
           GlobalCard(name: 'Iruñazarra', dir: 'C. Mercaderes, 15, 31001 Pamplona, Navarra', img: 'bares/irunazarra.jpg', desc: 'Tapas, carne y pescado en un restaurante ecléctico con paredes de ladrillo visto y pinchos expuestos en la barra.',),
+
+
           GlobalCard(name: 'Chez Belagua', dir: 'C. de la Estafeta, 49, 31001 Pamplona, Navarra', img: 'bares/chezBelagua.jpg', desc: 'Pinchos, menús y helados en una desenfadada tasca con kupelas y una gran lámpara hecha con botellas de sidra.',),
+
+
           GlobalCard(name: 'Bar Cervecería la Estafeta', dir: 'C. de la Estafeta, 54, 31001 Pamplona, Navarra', img: 'bares/chezBelagua.jpg', desc: 'Pintxos tradicionales en taberna rústica con vigas vistas y arcos más azulejos con imágenes de Pamplona.',),
+
+          
           GlobalCard(name: 'Bar Fitero Taberna', dir: 'C. de la Estafeta, 58, 31001 Pamplona, Navarra', img: 'bares/chezBelagua.jpg', desc: 'Alta cocina navarra en miniatura y fritos en clásico bar de ambiente taurino y familiar abierto en 1956.',),
         ],
 
