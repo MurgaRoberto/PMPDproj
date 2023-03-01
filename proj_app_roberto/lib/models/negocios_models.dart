@@ -1,12 +1,12 @@
 // To parse this JSON data, do
 //
-//     final bares = baresFromJson(jsonString);
+//     final negocios = negociosFromJson(jsonString);
 
 import 'dart:convert';
 
-Negocios baresFromJson(String str) => Negocios.fromJson(json.decode(str));
+Negocios negociosFromJson(String str) => Negocios.fromJson(json.decode(str));
 
-String baresToJson(Negocios data) => json.encode(data.toJson());
+String negociosToJson(Negocios data) => json.encode(data.toJson());
 
 class Negocios {
     Negocios({
