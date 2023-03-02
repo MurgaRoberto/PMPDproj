@@ -13,8 +13,7 @@ class PuntosProvider {
   List<Negocios> _listaHoteles = [];
 
   Future<List<Negocios>> cargarPuntos() async {
-    final data =
-        await rootBundle.loadString('assets/data/data.json');
+    final data = await rootBundle.loadString('data/data.json');
     final decodedData = json.decode(data);
     final openData = decodedData['OpenData'];
     final openDataRow = openData['OpenDataRow'];
@@ -24,20 +23,18 @@ class PuntosProvider {
   }
 
   Future<List<Negocios>> getListaBares() async {
-
     if (_listaBares.isEmpty) {
       if(_listaNegocios.isEmpty){
         await cargarPuntos();
       }
       _listaBares = [];
-      _listaNegocios.forEach((n) {
+      for (var n in _listaNegocios) {
         if (n.tipo == "bar") {
           _listaBares.add(n);
         }
-      });
+      }
     }
     return _listaBares;
   }
 }
-
 final puntosProvider = PuntosProvider();

@@ -13,8 +13,8 @@ class Negocios {
         required this.nombre,
         required this.tipo,
         required this.direccion,
-        required this.descripcion,
         required this.img,
+        required this.descripcion,
         required this.latitud,
         required this.longitud,
     });
@@ -22,8 +22,8 @@ class Negocios {
     String nombre;
     String tipo;
     String direccion;
-    String descripcion;
     String img;
+    String descripcion;
     String latitud;
     String longitud;
 
@@ -31,8 +31,8 @@ class Negocios {
         nombre: json["nombre"],
         tipo: json["tipo"],
         direccion: json["direccion"],
-        descripcion: json["descripcion"],
         img: json["img"],
+        descripcion: json["descripcion"],
         latitud: json["latitud"],
         longitud: json["longitud"],
     );
@@ -41,8 +41,8 @@ class Negocios {
         "nombre": nombre,
         "tipo": tipo,
         "direccion": direccion,
-        "descripcion": descripcion,
         "img": img,
+        "descripcion": descripcion,
         "latitud": latitud,
         "longitud": longitud,
     };
