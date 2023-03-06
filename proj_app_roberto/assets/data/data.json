@@ -1,70 +1,72 @@
 {
-    "Data": {
-        "DataRow": [
-            {
-                "nombre":"Txirrintxa",
-                "tipo":"bar",
-                "direccion":"C. de la Estafeta, 87, 31001 Pamplona, Navarra",
-                "descripcion":"Jamones colgados decoran esta clásica taberna con cerveza de elaboración propia más tapas y raciones.",
-                "img":"bares/txirrintxa.jpg",
-                "latitud":"42.8161644692592",
-                "longitud":"-1.6410433152613682"
-            },
-            {
-                "nombre":"Iruñazarra",
-                "tipo":"bar",
-                "direccion":"C. Mercaderes, 15, 31001 Pamplona, Navarra",
-                "descripcion":"Tapas, carne y pescado en un restaurante ecléctico con paredes de ladrillo visto y pinchos expuestos en la barra",
-                "img":"bares/irunazarra.jpg",
-                "latitud":"42.8185096523976",
-                "longitud":"-1.6433136860841389"
-            },
-            {
-                "nombre":"Chez Belagua",
-                "tipo":"bar",
-                "direccion":"C. de la Estafeta, 49, 31001 Pamplona, Navarra",
-                "descripcion":"Pinchos, menús y helados en una desenfadada tasca con kupelas y una gran lámpara hecha con botellas de sidra.",
-                "img":"bares/chezBelagua.jpg",
-                "latitud":"42.81722699107794",
-                "longitud":"-1.641793123856665"
-            },
-            {
-                "nombre":"Bar Cervecería la Estafeta",
-                "tipo":"bar",
-                "direccion":"C. de la Estafeta, 54, 31001 Pamplona, Navarra",
-                "descripcion":"Pintxos tradicionales en taberna rústica con vigas vistas y arcos más azulejos con imágenes de Pamplona.",
-                "img":"",
-                "latitud":"42.816803011851015",
-                "longitud":"-1.6415310049354057"
-            },
-            {
-                "nombre":"Bar Fitero Taberna",
-                "tipo":"bar",
-                "direccion":"C. de la Estafeta, 58, 31001 Pamplona, Navarra",
-                "descripcion":"Alta cocina navarra en miniatura y fritos en clásico bar de ambiente taurino y familiar abierto en 1956.",
-                "img":"",
-                "latitud":"42.81661440440041",
-                "longitud":"-1.6412242623944293"
-            },
-            {
-                "nombre":"Bar GAUCHO Taberna",
-                "tipo":"bar",
-                "direccion":"C. Espoz y Mina, 7, 31002 Pamplona, Navarra",
-                "descripcion":"Bar clásico famoso por sus pinchos, como el buñuelo de bacalao y las carrilleras, además de frituras y vino.",
-                "img":"",
-                "latitud":"42.81628315774462",
-                "longitud":"-1.6416644225442276"
-            },
-            {
-                "nombre":"Hotel la Perla",
-                "tipo":"hotel",
-                "direccion":"Plaza del castillo, nº1, Pamplona, Navarra",
-                "descripcion":"Este hotel refinado, ubicado en un edificio elegante del siglo XIX en la esquina de la plaza del Castillo, se encuentra a 4 minutos a pie de la catedral de Pamplona y a 2 km de la estación de trenes de Pamplona.",
-                "img":"hoteles/laPerla.jpg",
-                "latitud":"42.81787839422043",
-                "longitud":"-1.64250085270346"
-            }
-        ]
-    }
-        
+    "bares": [
+        {
+            "nombre":"Txirrintxa",
+            "direccion":"C. de la Estafeta, 87, 31001 Pamplona, Navarra",
+            "descripcion":"Jamones colgados decoran esta clásica taberna con cerveza de elaboración propia más tapas y raciones.",
+            "img":"bares/txirrintxa.jpg",
+            "latitud":"42.8161644692592",
+            "longitud":"-1.6410433152613682"
+        },
+        {
+            "nombre":"Iruñazarra",
+            "direccion":"C. Mercaderes, 15, 31001 Pamplona, Navarra",
+            "descripcion":"Tapas, carne y pescado en un restaurante ecléctico con paredes de ladrillo visto y pinchos expuestos en la barra",
+            "img":"bares/irunazarra.jpg",
+            "latitud":"42.8185096523976",
+            "longitud":"-1.6433136860841389"
+        },
+        {
+            "nombre":"Chez Belagua",
+            "direccion":"C. de la Estafeta, 49, 31001 Pamplona, Navarra",
+            "descripcion":"Pinchos, menús y helados en una desenfadada tasca con kupelas y una gran lámpara hecha con botellas de sidra.",
+            "img":"bares/chezBelagua.jpg",
+            "latitud":"42.81722699107794",
+            "longitud":"-1.641793123856665"
+        },
+        {
+            "nombre":"Bar Cervecería la Estafeta",
+            "direccion":"C. de la Estafeta, 54, 31001 Pamplona, Navarra",
+            "descripcion":"Pintxos tradicionales en taberna rústica con vigas vistas y arcos más azulejos con imágenes de Pamplona.",
+            "img":"",
+            "latitud":"42.816803011851015",
+            "longitud":"-1.6415310049354057"
+        },
+        {
+            "nombre":"Bar Fitero Taberna",
+            "direccion":"C. de la Estafeta, 58, 31001 Pamplona, Navarra",
+            "descripcion":"Alta cocina navarra en miniatura y fritos en clásico bar de ambiente taurino y familiar abierto en 1956.",
+            "img":"",
+            "latitud":"42.81661440440041",
+            "longitud":"-1.6412242623944293"
+        },
+        {
+            "nombre":"Bar GAUCHO Taberna",
+            "direccion":"C. Espoz y Mina, 7, 31002 Pamplona, Navarra",
+            "descripcion":"Bar clásico famoso por sus pinchos, como el buñuelo de bacalao y las carrilleras, además de frituras y vino.",
+            "img":"",
+            "latitud":"42.81628315774462",
+            "longitud":"-1.6416644225442276"
+        }
+    ],
+    "hoteles":[
+        {
+            "nombre":"Hotel la Perla",
+            "direccion":"Plaza del castillo, nº1, Pamplona, Navarra",
+            "descripcion":"Este hotel refinado, ubicado en un edificio elegante del siglo XIX en la esquina de la plaza del Castillo, se encuentra a 4 minutos a pie de la catedral de Pamplona y a 2 km de la estación de trenes de Pamplona.",
+            "img":"hoteles/laPerla.jpg",
+            "latitud":"42.81787839422043",
+            "longitud":"-1.64250085270346"
+        }
+    ],
+    "restaurantes":[
+        {
+            "nombre":"",
+            "direccion":"",
+            "descripcion":"",
+            "img":"",
+            "latitud":"",
+            "longitud":""
+        }
+    ]
 }

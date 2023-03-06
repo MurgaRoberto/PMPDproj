@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proj_app_roberto/screens/select_screen.dart';
+import 'package:proj_app_roberto/listview.dart';
 
 void main() => runApp(const MyApp());
 
@@ -10,8 +10,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Material App',
-      /*debugShowCheckedModeBanner: false,*/
-      home: SelectScreen()
+      debugShowCheckedModeBanner: false,
+      home: ListViewScreen()
     );
   }
 }

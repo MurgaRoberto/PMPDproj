@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proj_app_roberto/listData.dart';
 import 'package:proj_app_roberto/screens/bares.dart';
 import 'package:proj_app_roberto/screens/hoteles.dart';
 import 'package:proj_app_roberto/screens/restaurantes.dart';
@@ -15,7 +16,7 @@ class ListViewScreen extends StatelessWidget {
       body: Center(
         child: ListView(
           children: const [
-            ListItemWidget(icon: Icon(Icons.sports_bar), text: 'Bares', link: BaresScreen()),
+            ListItemWidget(icon: Icon(Icons.sports_bar), text: 'Bares', link: ListDataScreen(nameJson: "bares", text: 'Bares',)),
             ListItemWidget(icon: Icon(Icons.local_hotel_rounded), text: 'Hoteles', link: HotelesScreen()),
             ListItemWidget(icon: Icon(Icons.local_restaurant_rounded), text: 'Restaurantes', link: RestaurantesScreen()),
           ],
