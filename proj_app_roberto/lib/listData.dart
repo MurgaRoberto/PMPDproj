@@ -1,23 +1,26 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:proj_app_roberto/listview.dart';
 
 class ListDataScreen extends StatefulWidget {
-  final String nameJson;
+  final String name;
   final String text;
 
-  const ListDataScreen({super.key, required this.nameJson, required this.text});
+  const ListDataScreen({super.key, required this.name, required this.text});
 
   @override
   State<ListDataScreen> createState() => _ListDataScreenState();
 }
 
 class _ListDataScreenState extends State<ListDataScreen> {
-  final List _items = [];
+  List _items = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Hola Mundo'),
+        title: Text("${widget.text}"),
       ),
       body: Column(
         children: [
@@ -25,7 +28,6 @@ class _ListDataScreenState extends State<ListDataScreen> {
             child: ListView.builder(
               itemCount: _items.length,
               itemBuilder: (context, index) {
-
                 // Retorna el Card
                 return Card(
                   margin: const EdgeInsets.only(right:5, left: 5, top: 5, bottom: 50),
@@ -78,4 +80,18 @@ class _ListDataScreenState extends State<ListDataScreen> {
       ),
     );
   }
+
+  @override
+  void initState() {
+    super.initState();
+    readJson();
+  }
+  
+Future<void> readJson() async{
+  final String response = await rootBundle.loadString('assets/data/data.json');
+  final data = await json.decode(response);
+  setState((){
+    _items = data["${widget.name}"];
+  });
+}
 }

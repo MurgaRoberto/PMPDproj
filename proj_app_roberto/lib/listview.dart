@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter/services.dart';
 import 'package:proj_app_roberto/listData.dart';
-import 'package:proj_app_roberto/screens/bares.dart';
-import 'package:proj_app_roberto/screens/hoteles.dart';
-import 'package:proj_app_roberto/screens/restaurantes.dart';
+// import 'package:proj_app_roberto/screens/bares.dart';
+// import 'package:proj_app_roberto/screens/hoteles.dart';
+// import 'package:proj_app_roberto/screens/restaurantes.dart';
 
 class ListViewScreen extends StatelessWidget {
   const ListViewScreen({super.key});
@@ -16,9 +17,9 @@ class ListViewScreen extends StatelessWidget {
       body: Center(
         child: ListView(
           children: const [
-            ListItemWidget(icon: Icon(Icons.sports_bar), text: 'Bares', link: ListDataScreen(nameJson: "bares", text: 'Bares',)),
-            ListItemWidget(icon: Icon(Icons.local_hotel_rounded), text: 'Hoteles', link: HotelesScreen()),
-            ListItemWidget(icon: Icon(Icons.local_restaurant_rounded), text: 'Restaurantes', link: RestaurantesScreen()),
+            ListItemWidget(icon: Icon(Icons.sports_bar), text: 'Bares', link: ListDataScreen(name: "bares", text: 'Bares',)),
+            ListItemWidget(icon: Icon(Icons.local_hotel_rounded), text: 'Hoteles', link: ListDataScreen(name: "hotel", text: 'Hoteles',)),
+            ListItemWidget(icon: Icon(Icons.local_restaurant_rounded), text: 'Restaurantes', link:ListDataScreen(name: "hoteles", text: 'Restaurantes',)),
           ],
         ),
       ),
@@ -29,7 +30,7 @@ class ListViewScreen extends StatelessWidget {
 class ListItemWidget extends StatelessWidget {
   final Icon icon;
   final String text;
-  final Widget link;
+  final StatefulWidget link;
 
   const ListItemWidget({
     Key? key, required this.text, required this.icon, required this.link,
@@ -51,7 +52,7 @@ class ListItemWidget extends StatelessWidget {
         trailing: const Icon(Icons.navigate_next),
         onTap: () {
           Navigator.push(
-            context, 
+            context,
             MaterialPageRoute(
               builder: (context) => link
             ),
