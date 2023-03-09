@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:proj_app_roberto/listview.dart';
@@ -81,12 +80,24 @@ class _ListDataScreenState extends State<ListDataScreen> {
     );
   }
 
+
   @override
   void initState() {
     super.initState();
     readJson();
   }
-  
+/*
+  Future<void> openMap(double latitude, double longitude) async {
+    String mapUrl = '';
+    mapUrl = 'https://www.google.com/maps/dir/?api=1&destination=$latitude,$longitude&travelmode=driving';
+
+    if (await canLaunchUrl(Uri.parse(mapUrl))) {
+      await launchUrl(Uri.parse(mapUrl),mode: LaunchMode.externalApplication);
+    } else {
+      throw 'Could not open the map';
+    }
+  }
+  */
 Future<void> readJson() async{
   final String response = await rootBundle.loadString('assets/data/data.json');
   final data = await json.decode(response);
@@ -94,4 +105,15 @@ Future<void> readJson() async{
     _items = data["${widget.name}"];
   });
 }
+/*
+TextButton btn(double latitude, double longitude){
+  return TextButton(
+    style: TextButton.styleFrom(backgroundColor:Colors.red.shade400),
+    onPressed: (){
+      openMap(latitude, longitude);
+    },
+    child: const Text("Como llegar", style:  TextStyle(color: Colors.white),)
+  );
+}
+*/
 }

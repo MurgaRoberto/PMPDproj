@@ -92,6 +92,8 @@ class _ListDataScreen extends State<ListDataScreen> {
 
   // Esta función es para utilizar Google Maps con las coordenadas
 
+  
+
   Future<void> openMap(double latitude, double longitude) async {
      String mapUrl = '';
      mapUrl = 'https://www.google.com/maps/dir/?api=1&destination=$latitude,$longitude&travelmode=driving';
