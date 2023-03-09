@@ -17,14 +17,16 @@ class ListDataScreen extends StatefulWidget {
 
 class _ListDataScreenState extends State<ListDataScreen> {
   List _items = [];
+  
+
 
   // Fetch content from the json file
   Future<void> readJson() async {
     final String response = await rootBundle.loadString('data/data.json');
     final data = await json.decode(response);
     setState(() {
-      _items = data["bares"];
-      print(_items.length);
+      _items = data[widget.pageName];
+      print(widget.pageName);
     });
   }
   @override
@@ -38,7 +40,7 @@ class _ListDataScreenState extends State<ListDataScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("${widget.text}"),
+        title: Text(widget.text),
       ),
       body: Column(
           children: [
@@ -59,14 +61,15 @@ class _ListDataScreenState extends State<ListDataScreen> {
                             padding: const EdgeInsets.only(right: 35, left: 35, top: 10, bottom: 10),
                             child: Row(
                               children:  [
-                                Column(
-                                  
-                                  children: [
-                                      Text(_items[index]["nombre"],
-                                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                                    ),
-                                    Text(_items[index]["direccion"])
-                                  ],
+                                Center(
+                                  child: Column(
+                                    children: [
+                                        Text(_items[index]["nombre"],
+                                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                                      ),
+                                      Text(_items[index]["direccion"])
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),

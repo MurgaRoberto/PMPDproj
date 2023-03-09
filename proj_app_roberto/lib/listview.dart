@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter/services.dart';
 import 'package:proj_app_roberto/listData.dart';
+import 'package:proj_app_roberto/screens/settingsScreen.dart';
 
 class ListViewScreen extends StatelessWidget {
   const ListViewScreen({super.key});
@@ -8,6 +9,7 @@ class ListViewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       appBar: AppBar(
         title: const Text('¿Qué necesitas?'),
       ),
@@ -19,11 +21,19 @@ class ListViewScreen extends StatelessWidget {
             ListItemWidget(icon: Icon(Icons.local_restaurant_rounded), text: 'Restaurantes', link:ListDataScreen(pageName: 'restaurantes', text: 'Restaurantes')),
           ],
         ),
+        
       ),
     );
   }
 }
 
+
+
+
+
+  ///
+  /// Widget items de la Lista
+  ///
 class ListItemWidget extends StatelessWidget {
   final Icon icon;
   final String text;
@@ -32,6 +42,7 @@ class ListItemWidget extends StatelessWidget {
   const ListItemWidget({
     Key? key, required this.text, required this.icon, required this.link,
   }) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {

@@ -17,18 +17,10 @@
             "longitud":"-1.6433136860841389"
         },
         {
-            "nombre":"Chez Belagua",
-            "direccion":"C. de la Estafeta, 49, 31001 Pamplona, Navarra",
-            "descripcion":"Pinchos, menús y helados en una desenfadada tasca con kupelas y una gran lámpara hecha con botellas de sidra.",
-            "img":"bares/chezBelagua.jpg",
-            "latitud":"42.81722699107794",
-            "longitud":"-1.641793123856665"
-        },
-        {
             "nombre":"Bar Cervecería la Estafeta",
             "direccion":"C. de la Estafeta, 54, 31001 Pamplona, Navarra",
             "descripcion":"Pintxos tradicionales en taberna rústica con vigas vistas y arcos más azulejos con imágenes de Pamplona.",
-            "img":"",
+            "img":"bares/laEstafeta.jpg",
             "latitud":"42.816803011851015",
             "longitud":"-1.6415310049354057"
         },
@@ -36,7 +28,7 @@
             "nombre":"Bar Fitero Taberna",
             "direccion":"C. de la Estafeta, 58, 31001 Pamplona, Navarra",
             "descripcion":"Alta cocina navarra en miniatura y fritos en clásico bar de ambiente taurino y familiar abierto en 1956.",
-            "img":"",
+            "img":"bares/barFitero.jpg",
             "latitud":"42.81661440440041",
             "longitud":"-1.6412242623944293"
         },
@@ -44,29 +36,61 @@
             "nombre":"Bar GAUCHO Taberna",
             "direccion":"C. Espoz y Mina, 7, 31002 Pamplona, Navarra",
             "descripcion":"Bar clásico famoso por sus pinchos, como el buñuelo de bacalao y las carrilleras, además de frituras y vino.",
-            "img":"",
+            "img":"bares/gaucho.jpg",
             "latitud":"42.81628315774462",
             "longitud":"-1.6416644225442276"
         }
     ],
     "hoteles":[
         {
-            "nombre":"Hotel la Perla",
+            "nombre":"Gran Hotel la Perla",
             "direccion":"Plaza del castillo, nº1, Pamplona, Navarra",
             "descripcion":"Este hotel refinado, ubicado en un edificio elegante del siglo XIX en la esquina de la plaza del Castillo, se encuentra a 4 minutos a pie de la catedral de Pamplona y a 2 km de la estación de trenes de Pamplona.",
             "img":"hoteles/laPerla.jpg",
             "latitud":"42.81787839422043",
             "longitud":"-1.64250085270346"
+        },
+        {
+            "nombre":"Hotel Tres Reyes",
+            "direccion":"C. Taconera, 1, 31001 Pamplona, Navarra",
+            "descripcion":"Hotel elegante con habitaciones modernas, restaurante refinado, bar en el vestíbulo, gimnasio y piscina.",
+            "img":"hoteles/tresReyes.jpg",
+            "latitud":"42.81596271002504",
+            "longitud":"-1.6492094751000241"
+        },
+        {
+            "nombre":"Castillo de Gorraiz Hotel & Spa",
+            "direccion":"Av. de Egüés, 78, 31620 Gorráiz, Navarra",
+            "descripcion":"Hotel sofisticado con un campo de golf de 18 hoyos, spa, vistas al campo y restaurante.",
+            "img":"hoteles/gorraiz.jpg",
+            "latitud":"42.82179196524213",
+            "longitud":"-1.5792739462642351"
+        },
+        {
+            "nombre":"Hotel Alma de Pamplona",
+            "direccion":"C. Beloso Bajo, 11, 31006 Pamplona, Navarra",
+            "descripcion":"Hotel moderno con suites funcionales, un restaurante de moda, bar y piscina cubierta.",
+            "img":"hoteles/almaPamplona.jpg",
+            "latitud":"42.819957348111195",
+            "longitud":"-1.623773486743757"
         }
     ],
     "restaurantes":[
         {
-            "nombre":"",
-            "direccion":"",
-            "descripcion":"",
-            "img":"",
-            "latitud":"",
-            "longitud":""
+            "nombre":"La Mar Salada",
+            "direccion":"C. de Leyre, 12, 31002 Pamplona, Navarra",
+            "descripcion":"Originales platos de pescado, marisco, carne y arroz en un moderno restaurante en tonos de madera clara.",
+            "img":"restaurantes/laMarSalada.jpg",
+            "latitud":"42.81787839422043",
+            "longitud":"-1.64250085270346"
+        },
+        {
+            "nombre":"Chez Belagua",
+            "direccion":"C. de la Estafeta, 49, 31001 Pamplona, Navarra",
+            "descripcion":"Pinchos, menús y helados en una desenfadada tasca con kupelas y una gran lámpara hecha con botellas de sidra.",
+            "img":"restaurantes/chezBelagua.jpg",
+            "latitud":"42.81722699107794",
+            "longitud":"-1.641793123856665"
         }
     ]
 }
