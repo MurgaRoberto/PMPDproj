@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:proj_app_roberto/listview.dart';
 
@@ -102,3 +103,4 @@ class GlobalCard extends StatelessWidget {
     );
   }
 }
+*/

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'bares.dart';
 
 class HotelesScreen extends StatelessWidget {
@@ -15,3 +15,4 @@ class HotelesScreen extends StatelessWidget {
   }
 }
 
+*/

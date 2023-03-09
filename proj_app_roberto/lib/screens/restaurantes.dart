@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'bares.dart';
 
 class RestaurantesScreen extends StatelessWidget {
@@ -26,4 +26,4 @@ class RestaurantesScreen extends StatelessWidget {
     );
   }
 }
-
+*/
