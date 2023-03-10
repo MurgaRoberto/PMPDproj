@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter/services.dart';
-import 'package:proj_app_roberto/listData.dart';
-import 'package:proj_app_roberto/screens/settingsScreen.dart';
+import 'listData.dart';
 
 class ListViewScreen extends StatelessWidget {
   const ListViewScreen({super.key});
@@ -9,7 +7,7 @@ class ListViewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+//      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       appBar: AppBar(
         title: const Text('¿Qué necesitas?'),
       ),

@@ -26,7 +26,7 @@ class _ListDataScreenState extends State<ListDataScreen> {
     final data = await json.decode(response);
     setState(() {
       _items = data[widget.pageName];
-      print(widget.pageName);
+      //print(widget.pageName);
     });
   }
   @override

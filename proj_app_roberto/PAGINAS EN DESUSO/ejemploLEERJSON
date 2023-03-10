@@ -2,8 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:proj_app_roberto/screens/listview.dart';
 
-import 'listview.dart';
+
 
 class ListDataScreen extends StatefulWidget {
   final String name;
@@ -88,7 +89,7 @@ class _ListDataScreenState extends State<ListDataScreen> {
     super.initState();
     readJson();
   }
-/*
+
   Future<void> openMap(double latitude, double longitude) async {
     String mapUrl = '';
     mapUrl = 'https://www.google.com/maps/dir/?api=1&destination=$latitude,$longitude&travelmode=driving';
@@ -99,7 +100,10 @@ class _ListDataScreenState extends State<ListDataScreen> {
       throw 'Could not open the map';
     }
   }
-  */
+
+
+
+
 Future<void> readJson() async{
   final String response = await rootBundle.loadString('assets/data/data.json');
   final data = await json.decode(response);
