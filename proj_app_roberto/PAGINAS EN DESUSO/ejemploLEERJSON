@@ -112,7 +112,7 @@ Future<void> readJson() async{
     _items = data["${widget.name}"];
   });*/
 }
-/*
+
 TextButton btn(double latitude, double longitude){
   return TextButton(
     style: TextButton.styleFrom(backgroundColor:Colors.red.shade400),
@@ -122,5 +122,5 @@ TextButton btn(double latitude, double longitude){
     child: const Text("Como llegar", style:  TextStyle(color: Colors.white),)
   );
 }
-*/
+
 }

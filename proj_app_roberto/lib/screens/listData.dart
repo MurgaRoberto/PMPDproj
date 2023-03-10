@@ -29,11 +29,20 @@ class _ListDataScreenState extends State<ListDataScreen> {
       //print(widget.pageName);
     });
   }
+
+
+
   @override
   void initState() {
     super.initState();
     readJson();
   }
+
+
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -107,4 +116,15 @@ class _ListDataScreenState extends State<ListDataScreen> {
         ),
     );
   }
+
+
+///
+/// Abrir google maps
+///
+Future<void> openMap(double latitude, double longitude) async {
+  String mapUrl = '';
+  mapUrl = 'https://www.google.com/maps/dir/?api=1&destination=$latitude,$longitude&travelmode=driving';
+  
+}
+
 }

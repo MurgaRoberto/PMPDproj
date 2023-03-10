@@ -7,11 +7,9 @@ class FavoritosScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Center(
-            child: Text('Favoritos'),
-          ),
+          title: const Text('Favoritos'),
         ),
-        body: Center(
+        body: const Center(
           child: Text('Hellow World!'),
         ),
     );

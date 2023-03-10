@@ -25,7 +25,11 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Material App',
       home: Scaffold(
+
+
+        /// 
         /// Barra de navegacion
+        /// 
         bottomNavigationBar: BottomNavigationBar(
           onTap: (index){
             setState(() {
@@ -38,12 +42,19 @@ class _MyAppState extends State<MyApp> {
             BottomNavigationBarItem(icon: Icon( Icons.security ), label: 'Ajustes')
           ],
         ),
+
+
+        ///
         /// Widgety del boton flotante
+        /// 
         floatingActionButton: const BotonFavoritos(),
         /// Posicion del boton flotante
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         
+
+        /// 
         /// Seteamos la pagina
+        /// 
         body: _paginas[_paginaActual]
         
         ),
@@ -66,10 +77,12 @@ class BotonFavoritos extends StatelessWidget {
       
       child: const Icon(Icons.favorite_rounded),
       onPressed: (() {
-        FavoritosScreen();
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => FavoritosScreen())
+        );
         print('Hellow World');
       }),
-      // ignore: avoid_print
     );
   }
 }
