@@ -1,7 +1,9 @@
 // ignore: file_names
 import 'dart:convert';
+import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'listview.dart';
 
@@ -101,7 +103,7 @@ class _ListDataScreenState extends State<ListDataScreen> {
                                     )
                                   );
                                 }, 
-                                child: const Text("Ver en el mapa")
+                                child: comoLlegarBtn(double.parse( _items[index]["latitud"]), double.parse(_items[index]["longitud"]))
                               ),
 
                           ),
@@ -124,7 +126,26 @@ class _ListDataScreenState extends State<ListDataScreen> {
 Future<void> openMap(double latitude, double longitude) async {
   String mapUrl = '';
   mapUrl = 'https://www.google.com/maps/dir/?api=1&destination=$latitude,$longitude&travelmode=driving';
-  
+
+  if (await canLaunchUrl(Uri.parse(mapUrl))) {
+    await launchUrl(Uri.parse(mapUrl),mode: LaunchMode.externalApplication);
+  } else {
+    throw 'Could not open the map';
+  }
 }
+
+///
+/// Boton abrir mapa
+///
+TextButton comoLlegarBtn(double latitude, double longitude){
+  return TextButton(
+    style: TextButton.styleFrom(backgroundColor: Colors.red.shade400),
+    onPressed: (){
+      openMap(latitude, longitude);
+    },
+    child: const Text('Como llegar', style: TextStyle(color: Colors.white),)
+  );
+}
+
 
 }
