@@ -6,7 +6,8 @@
             "descripcion":"Jamones colgados decoran esta clásica taberna con cerveza de elaboración propia más tapas y raciones.",
             "img":"bares/txirrintxa.jpg",
             "latitud":"42.8161644692592",
-            "longitud":"-1.6410433152613682"
+            "longitud":"-1.6410433152613682",
+            "favorito":"true"
         },
         {
             "nombre":"Iruñazarra",
@@ -73,6 +74,22 @@
             "img":"hoteles/almaPamplona.jpg",
             "latitud":"42.819957348111195",
             "longitud":"-1.623773486743757"
+        },
+        {
+            "nombre":"Hotel Alda Centro Pamplona",
+            "direccion":"Pl. Virgen de la O, 7, 31001 Pamplona, Navarra",
+            "descripcion":"Este sencillo hotel regentado por una familia se encuentra en el centro de Pamplona, junto a las antiguas murallas de la ciudad, a 6 minutos a pie del Museo de Navarra y a 11 minutos a pie de la catedral de Pamplona.",
+            "img":"hoteles/aldaCentro.jpg",
+            "latitud":"42.8182829159807",
+            "longitud":"-1.6498999153398457"
+        },
+        {
+            "nombre":"Hotel Avenida-Pamplona",
+            "direccion":"Av. de Zaragoza, 5, 31003 Pamplona, Navarra",
+            "descripcion":"Este hotel, decorado de modo informal con detalles elegantes, se encuentra en el centro urbano, a 5 minutos a pie del casco antiguo. El hotel tiene un restaurante japonés refinado y ofrece desayuno y aparcamiento por un suplemento",
+            "img":"hoteles/avenida.jpg",
+            "latitud":"42.81231619461379",
+            "longitud":"-1.64272692341072"
         }
     ],
     "restaurantes":[
@@ -91,6 +108,46 @@
             "img":"restaurantes/chezBelagua.jpg",
             "latitud":"42.81722699107794",
             "longitud":"-1.641793123856665"
+        },
+        {
+            "nombre":"Restaurante Alma de Pamplona",
+            "direccion":"C. Beloso Bajo, 11, 31006 Pamplona, Navarra",
+            "descripcion":"Pinchos, menús y helados en una desenfadada tasca con kupelas y una gran lámpara hecha con botellas de sidra.",
+            "img":"restaurantes/chezBelagua.jpg",
+            "latitud":"42.81722699107794",
+            "longitud":"-1.641793123856665"
+        },
+        {
+            "nombre":"Restaurante La Biblioteca",
+            "direccion":"C. Beloso Bajo, 11, 31006 Pamplona, Navarra",
+            "descripcion":"Restaurante sofisticado con comida elaborada, un ambiente relajante y personal muy atento y amable.",
+            "img":"restaurantes/laBiblioteca.jpg",
+            "latitud":"42.8197319738969",
+            "longitud":"-1.623763358206201"
+        },
+        {
+            "nombre":"La Olla",
+            "direccion":"Av. Roncesvalles, 2, 31002 Pamplona, Navarra",
+            "descripcion":"Recetas navarras a base de productos de temporada en un acogedor local, decorado con azulejería, con terraza.",
+            "img":"restaurantes/laOlla.jpg",
+            "latitud":"42.81547008133764",
+            "longitud":"-1.6407511883144281"
+        },
+        {
+            "nombre":"Restaurante Anttonenea",
+            "direccion":"C. de San Antón, 48, 31001 Pamplona, Navarra",
+            "descripcion":"Platos de cocina tradicional, como paletilla de cordero y pulpo a la brasa, en un restaurante sencillo con menú degustación.",
+            "img":"restaurantes/anttonenea.jpg",
+            "latitud":"42.81615563544658",
+            "longitud":"-1.646855844179113"
+        },
+        {
+            "nombre":"La Fogoneta Culibar",
+            "direccion":" C. de Francisco Bergamin, 31, 31003 Pamplona",
+            "descripcion":"Platos de cocina tradicional, como alubias, migas, en un restaurante con buen decorado y ambiente acogedor.",
+            "img":"restaurantes/fogoneta.jpg",
+            "latitud":"42.81074983479285",
+            "longitud":"-1.6389326306428773"
         }
     ]
 }

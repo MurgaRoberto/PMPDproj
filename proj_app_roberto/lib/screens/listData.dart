@@ -1,8 +1,10 @@
 // ignore: file_names
 import 'dart:convert';
 import 'dart:core';
+import 'dart:js_util';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:like_button/like_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'listview.dart';
@@ -43,9 +45,6 @@ class _ListDataScreenState extends State<ListDataScreen> {
 
 
 
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,7 +74,7 @@ class _ListDataScreenState extends State<ListDataScreen> {
                                 Center(
                                   child: Column(
                                     children: [
-                                        Text(_items[index]["nombre"],
+                                      Text(_items[index]["nombre"],
                                         style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                                       ),
                                       Text(_items[index]["direccion"])
@@ -92,21 +91,26 @@ class _ListDataScreenState extends State<ListDataScreen> {
                             margin: const EdgeInsets.all(10),
                             child: Text(_items[index]["descripcion"], textAlign: TextAlign.center,)
                           ),
+
                           Padding(
                             padding: const EdgeInsets.only(right: 10, top: 10, left: 10, bottom: 20),
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context, 
-                                    MaterialPageRoute(
-                                      builder: (context) => const ListViewScreen()
-                                    )
-                                  );
-                                }, 
+
                                 child: comoLlegarBtn(double.parse( _items[index]["latitud"]), double.parse(_items[index]["longitud"]))
                               ),
 
-                          ),
+                          Container(
+                            margin: const EdgeInsets.only(bottom: 20),
+                            child: LikeButton(
+                              likeBuilder: (isTapped){
+                                return Icon(
+                                  Icons.favorite_rounded,
+                                  color: isTapped ? Colors.deepPurple : Colors.grey,
+                                );
+                              },
+
+                            ),
+                          )
+
                         ],
                       ),
                     );
@@ -139,11 +143,12 @@ Future<void> openMap(double latitude, double longitude) async {
 ///
 TextButton comoLlegarBtn(double latitude, double longitude){
   return TextButton(
-    style: TextButton.styleFrom(backgroundColor: Colors.red.shade400),
+    style: TextButton.styleFrom(backgroundColor: const Color.fromARGB(255, 255, 172, 64)),
     onPressed: (){
       openMap(latitude, longitude);
     },
-    child: const Text('Como llegar', style: TextStyle(color: Colors.white),)
+    child: const Text('Como llegar', style: TextStyle(color: Colors.white),
+  )
   );
 }
 

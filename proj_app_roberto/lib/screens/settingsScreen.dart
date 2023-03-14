@@ -44,6 +44,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 )),
                 const Spacer(),
                 customSwitch(val1, onChangeFunction1),
+                
                 ],
               ),
             ],
@@ -56,7 +57,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   CupertinoSwitch customSwitch(bool val, Function onChangeMethod) {
     return CupertinoSwitch(
                 trackColor: Colors.grey.shade700,
-                activeColor: Colors.blue,
+                activeColor: Color.fromARGB(255, 255, 205, 140),
                 value: val, 
                 onChanged: (newValue) { 
                   onChangeMethod(newValue);

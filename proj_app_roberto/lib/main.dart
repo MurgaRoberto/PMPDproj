@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:proj_app_roberto/screens/listview.dart';
 import 'package:proj_app_roberto/screens/pageFavs.dart';
 import 'package:proj_app_roberto/screens/settingsScreen.dart';
+import 'package:proj_app_roberto/theme/app_theme.dart';
 
 void main() => runApp(const MyApp());
 
@@ -23,6 +24,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: AppTheme.mainTheme,
       title: 'Material App',
       home: Scaffold(
 
@@ -31,6 +33,7 @@ class _MyAppState extends State<MyApp> {
         /// Barra de navegacion
         /// 
         bottomNavigationBar: BottomNavigationBar(
+          fixedColor: Color.fromARGB(255, 255, 166, 49),
           onTap: (index){
             setState(() {
               _paginaActual = index;
@@ -74,15 +77,17 @@ class BotonFavoritos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-      
-      child: const Icon(Icons.favorite_rounded),
+      elevation: 0,
+      backgroundColor: Color.fromARGB(255, 255, 166, 49),
       onPressed: (() {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => FavoritosScreen())
+          MaterialPageRoute(
+            builder: (context) => const FavoritosScreen(),
+          )
         );
-        print('Hellow World');
       }),
+      child: const Icon(Icons.favorite_rounded),
     );
   }
 }
