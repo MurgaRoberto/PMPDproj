@@ -27,11 +27,6 @@ class _MyAppState extends State<MyApp> {
       theme: AppTheme.mainTheme,
       title: 'Material App',
       home: Scaffold(
-
-
-        /// 
-        /// Barra de navegacion
-        /// 
         bottomNavigationBar: BottomNavigationBar(
           fixedColor: Color.fromARGB(255, 255, 166, 49),
           onTap: (index){
@@ -45,29 +40,15 @@ class _MyAppState extends State<MyApp> {
             BottomNavigationBarItem(icon: Icon( Icons.security ), label: 'Ajustes')
           ],
         ),
-
-
-        ///
-        /// Widgety del boton flotante
-        /// 
         floatingActionButton: const BotonFavoritos(),
         /// Posicion del boton flotante
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        
-
-        /// 
-        /// Seteamos la pagina
-        /// 
         body: _paginas[_paginaActual]
-        
         ),
         debugShowCheckedModeBanner: false,
     );
   }
 }
-
-
-
 ///
 /// Boton flotante
 ///

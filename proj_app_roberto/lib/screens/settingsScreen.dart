@@ -1,9 +1,5 @@
-import 'dart:html';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:proj_app_roberto/main.dart';
-import 'package:proj_app_roberto/screens/pageFavs.dart';
 
 
 class SettingsScreen extends StatefulWidget {

@@ -22,8 +22,6 @@ class ListDataScreen extends StatefulWidget {
 class _ListDataScreenState extends State<ListDataScreen> {
   List _items = [];
   
-
-
   // Fetch content from the json file
   Future<void> readJson() async {
     final String response = await rootBundle.loadString('data/data.json');
@@ -33,8 +31,6 @@ class _ListDataScreenState extends State<ListDataScreen> {
       //print(widget.pageName);
     });
   }
-
-
 
   @override
   void initState() {
