@@ -40,7 +40,6 @@ class _ListDataScreenState extends State<ListDataScreen> {
 
 
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,6 +56,7 @@ class _ListDataScreenState extends State<ListDataScreen> {
                       itemCount: _items.length,
                       itemBuilder: (context, index) {
                         return Card(
+                      
                       margin: const EdgeInsets.only(right:5, left: 5, top: 5, bottom: 10),
                       color: Colors.white,
 

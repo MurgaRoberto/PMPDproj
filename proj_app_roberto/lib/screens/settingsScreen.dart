@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -23,31 +25,59 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Configuraccion'),
+        title: const Text('Perfil'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(        
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text('Tema oscuro', style: TextStyle(
-                  fontSize: 15.0,
-                  fontFamily: 'Roboto',
-                  fontWeight: FontWeight.w300,
-                  color: Colors.black
-                )),
-                const Spacer(),
-                customSwitch(val1, onChangeFunction1),
-                
-                ],
-              ),
-            ],
-          )
-        ),
-      );
+      
+        body: Container(
+      margin: const EdgeInsets.all(50),
+      child: Column(
+        children: [
+          TextFormField(
+            onChanged: (value) {},
+            validator: ((value) {
+              if (value == null) return 'campo vacío y es obligatorio';
+              return value.length < 3 ? 'Minimo 3 valores' : null;
+            }),
+            keyboardType: TextInputType.name,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
+            decoration: const InputDecoration(
+                hintText: 'Nombre de usuario',
+                labelText: 'Nombre de usuario',
+                counterText: '3 carácteres mínimo',
+                prefixIcon: Icon(Icons.person_outline_rounded),
+                border: OutlineInputBorder(
+                    borderRadius:
+                        BorderRadius.only(bottomLeft: Radius.circular(10)))),
+          ),
 
+          const Spacer(flex: 10,),
+
+          TextFormField(
+            onChanged: (value) {},
+            validator: ((value) {
+              if (value == null) return 'campo vacío y es obligatorio';
+              return value.length < 3 ? 'Minimo 3 valores' : null;
+            }),
+            keyboardType: TextInputType.emailAddress,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
+            decoration: const InputDecoration(
+                hintText: 'E-Mail',
+                labelText: 'Email',
+                helperText: 'Solo letras',
+                counterText: 'example@email.com',
+                prefixIcon: Icon(Icons.alternate_email_rounded),
+                border: OutlineInputBorder(
+                    borderRadius:
+                        BorderRadius.only(bottomLeft: Radius.circular(10)))),
+          
+          ),
+
+          const Spacer(flex: 150,),
+          comoLlegarBtn(),
+          //const CheckBoxScreen(),
+        ],
+      ),
+    ));
   }
 
   CupertinoSwitch customSwitch(bool val, Function onChangeMethod) {
@@ -60,4 +90,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
                  },
               );
   }
+}
+
+
+///
+/// Boton abrir mapa
+///
+TextButton comoLlegarBtn(){
+  return TextButton(
+    style: TextButton.styleFrom(backgroundColor: const Color.fromARGB(255, 255, 172, 64), fixedSize: Size.fromHeight(50), maximumSize:  const Size.fromWidth(100), ),
+    onPressed: (){
+      print('Hello');
+    },
+    child: const Text('Entrar', style: TextStyle(color: Colors.white),
+  )
+  );
 }

@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
           currentIndex: _paginaActual,
           items: const [
             BottomNavigationBarItem(icon: Icon( Icons.home ), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon( Icons.security ), label: 'Ajustes')
+            BottomNavigationBarItem(icon: Icon( Icons.person_pin ), label: 'Perfil')
           ],
         ),
         floatingActionButton: const BotonFavoritos(),
