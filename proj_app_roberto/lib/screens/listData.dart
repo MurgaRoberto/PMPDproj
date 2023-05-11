@@ -1,13 +1,10 @@
 // ignore: file_names
 import 'dart:convert';
 import 'dart:core';
-import 'dart:js_util';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:like_button/like_button.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-import 'listview.dart';
 
 class ListDataScreen extends StatefulWidget {
   final String pageName;
@@ -90,7 +87,6 @@ class _ListDataScreenState extends State<ListDataScreen> {
 
                           Padding(
                             padding: const EdgeInsets.only(right: 10, top: 10, left: 10, bottom: 20),
-
                                 child: comoLlegarBtn(double.parse( _items[index]["latitud"]), double.parse(_items[index]["longitud"]))
                               ),
 
@@ -147,6 +143,5 @@ TextButton comoLlegarBtn(double latitude, double longitude){
   )
   );
 }
-
 
 }

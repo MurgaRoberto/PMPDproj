@@ -3,8 +3,15 @@ import 'package:proj_app_roberto/screens/listview.dart';
 import 'package:proj_app_roberto/screens/pageFavs.dart';
 import 'package:proj_app_roberto/screens/settingsScreen.dart';
 import 'package:proj_app_roberto/theme/app_theme.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() => runApp(const MyApp());
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
+  runApp(const MyApp());  
+} 
+
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});

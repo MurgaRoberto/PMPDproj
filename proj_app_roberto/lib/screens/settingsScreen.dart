@@ -1,7 +1,8 @@
-import 'dart:html';
-
+// ignore_for_file: file_names
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 
 class SettingsScreen extends StatefulWidget {
@@ -13,13 +14,38 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
+  TextEditingController name = TextEditingController();
+  TextEditingController password = TextEditingController();
+  final firebase = FirebaseFirestore.instance;
+
+/// 
+/// Utilizamos base de datos no relacional de tipo documental
+/// con estructura bson 
+/// 
+
+  registroUsuario() async {
+    try {
+      await firebase.collection('usuarios').doc('ux9bQ9q05XxSPsvIwkxX').set(
+        {
+          "name":name.text,
+          "password":password.text
+        }
+      );
+    } catch (e) {
+      //print('ERROR!' + e.toString());
+    }
+  }
+
   bool val1 = false;
+  int numUsuarios = 0;
 
   onChangeFunction1(bool newValue1){
     setState(() {
       val1 = newValue1;
     });
   }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -40,10 +66,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
             }),
             keyboardType: TextInputType.name,
             autovalidateMode: AutovalidateMode.onUserInteraction,
+            controller: name,
             decoration: const InputDecoration(
                 hintText: 'Nombre de usuario',
                 labelText: 'Nombre de usuario',
-                counterText: '3 carácteres mínimo',
+                helperText: 'Minimo 3 caracteres',
                 prefixIcon: Icon(Icons.person_outline_rounded),
                 border: OutlineInputBorder(
                     borderRadius:
@@ -56,16 +83,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
             onChanged: (value) {},
             validator: ((value) {
               if (value == null) return 'campo vacío y es obligatorio';
-              return value.length < 3 ? 'Minimo 3 valores' : null;
+              return value.length < 7 ? 'Minimo 7 valores' : null;
             }),
+            obscureText: true,
             keyboardType: TextInputType.emailAddress,
             autovalidateMode: AutovalidateMode.onUserInteraction,
+            controller: password,
             decoration: const InputDecoration(
-                hintText: 'E-Mail',
-                labelText: 'Email',
-                helperText: 'Solo letras',
-                counterText: 'example@email.com',
-                prefixIcon: Icon(Icons.alternate_email_rounded),
+                hintText: 'Contraseña',
+                labelText: 'Contraseña',
+                helperText: 'Minimo 7 caracteres',
+                prefixIcon: Icon(Icons.password),
                 border: OutlineInputBorder(
                     borderRadius:
                         BorderRadius.only(bottomLeft: Radius.circular(10)))),
@@ -73,7 +101,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
 
           const Spacer(flex: 150,),
-          comoLlegarBtn(),
+
+
+          btnForm('Registrarse'), 
+          btnForm('Iniciar sesión'), 
           //const CheckBoxScreen(),
         ],
       ),
@@ -90,19 +121,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
                  },
               );
   }
-}
-
-
 ///
-/// Boton abrir mapa
+/// Boton para registro o inicio de sesión
 ///
-TextButton comoLlegarBtn(){
+TextButton btnForm(texto){
   return TextButton(
     style: TextButton.styleFrom(backgroundColor: const Color.fromARGB(255, 255, 172, 64), fixedSize: Size.fromHeight(50), maximumSize:  const Size.fromWidth(100), ),
     onPressed: (){
-      print('Hello');
+      print('ENVIANDO...');
+      registroUsuario();
+
     },
-    child: const Text('Entrar', style: TextStyle(color: Colors.white),
+    child: Text(texto, style: const TextStyle(color: Colors.white),
   )
   );
 }
+}
+
