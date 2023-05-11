@@ -22,17 +22,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
 /// Utilizamos base de datos no relacional de tipo documental
 /// con estructura bson 
 /// 
-
   registroUsuario() async {
     try {
-      await firebase.collection('usuarios').doc('ux9bQ9q05XxSPsvIwkxX').set(
+      await FirebaseFirestore.instance.collection('users').doc('registrados').set(
         {
-          "name":name.text,
-          "password":password.text
+          'name':name.text,
+          'password':password.text
         }
       );
     } catch (e) {
-      //print('ERROR!' + e.toString());
+      print('ERROR!' + e.toString());
     }
   }
 
@@ -102,8 +101,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
           const Spacer(flex: 150,),
 
+          // Padding(
+          //   padding: EdgeInsets.all(20),
+          //   child: ElevatedButton(
+          //     onPressed: () {
+          //       print('Enviando...');
+          //       registroUsuario();  
+          //     },
+          //     child: Text('Enviar'),
+          //   )
+          
+          // ),
 
-          btnForm('Registrarse'), 
+          // btnForm('Registrarse'), 
           btnForm('Iniciar sesión'), 
           //const CheckBoxScreen(),
         ],
@@ -124,13 +134,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
 ///
 /// Boton para registro o inicio de sesión
 ///
-TextButton btnForm(texto){
+TextButton btnForm(texto) {
   return TextButton(
     style: TextButton.styleFrom(backgroundColor: const Color.fromARGB(255, 255, 172, 64), fixedSize: Size.fromHeight(50), maximumSize:  const Size.fromWidth(100), ),
-    onPressed: (){
+    onPressed: () {
       print('ENVIANDO...');
       registroUsuario();
-
+      name.text = '';
+      password.text = '';
     },
     child: Text(texto, style: const TextStyle(color: Colors.white),
   )

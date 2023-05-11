@@ -3,12 +3,15 @@ import 'package:proj_app_roberto/screens/listview.dart';
 import 'package:proj_app_roberto/screens/pageFavs.dart';
 import 'package:proj_app_roberto/screens/settingsScreen.dart';
 import 'package:proj_app_roberto/theme/app_theme.dart';
-import 'package:firebase_core/firebase_core.dart';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp();
+  Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());  
 } 
 
