@@ -4,25 +4,15 @@ import 'package:proj_app_roberto/screens/pageFavs.dart';
 import 'package:proj_app_roberto/screens/settingsScreen.dart';
 import 'package:proj_app_roberto/theme/app_theme.dart';
 
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
-
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+void main() {
   runApp(const MyApp());  
 } 
-
-
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
 }
-
 class _MyAppState extends State<MyApp> {
   int _paginaActual = 0;
 
@@ -35,7 +25,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: AppTheme.mainTheme,
-      title: 'Material App',
+      title: 'Busca Pamplona',
       home: Scaffold(
         bottomNavigationBar: BottomNavigationBar(
           fixedColor: Color.fromARGB(255, 255, 166, 49),
@@ -59,6 +49,8 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+
+
 ///
 /// Boton flotante
 ///

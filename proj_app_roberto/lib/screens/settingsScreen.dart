@@ -1,8 +1,6 @@
-// ignore_for_file: file_names
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
+
 
 
 class SettingsScreen extends StatefulWidget {
@@ -16,24 +14,7 @@ class SettingsScreen extends StatefulWidget {
 class _SettingsScreenState extends State<SettingsScreen> {
   TextEditingController name = TextEditingController();
   TextEditingController password = TextEditingController();
-  final firebase = FirebaseFirestore.instance;
 
-/// 
-/// Utilizamos base de datos no relacional de tipo documental
-/// con estructura bson 
-/// 
-  registroUsuario() async {
-    try {
-      await FirebaseFirestore.instance.collection('users').doc('registrados').set(
-        {
-          'name':name.text,
-          'password':password.text
-        }
-      );
-    } catch (e) {
-      print('ERROR!' + e.toString());
-    }
-  }
 
   bool val1 = false;
   int numUsuarios = 0;
@@ -101,26 +82,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
           const Spacer(flex: 150,),
 
-          // Padding(
-          //   padding: EdgeInsets.all(20),
-          //   child: ElevatedButton(
-          //     onPressed: () {
-          //       print('Enviando...');
-          //       registroUsuario();  
-          //     },
-          //     child: Text('Enviar'),
-          //   )
-          
-          // ),
-
-          // btnForm('Registrarse'), 
           btnForm('Iniciar sesión'), 
-          //const CheckBoxScreen(),
+          
         ],
       ),
     ));
   }
-
+///
+///
+/// BORRAR 
+///
   CupertinoSwitch customSwitch(bool val, Function onChangeMethod) {
     return CupertinoSwitch(
                 trackColor: Colors.grey.shade700,
@@ -134,14 +105,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
 ///
 /// Boton para registro o inicio de sesión
 ///
-TextButton btnForm(texto) {
-  return TextButton(
+ElevatedButton btnForm(texto) {
+  return ElevatedButton(
     style: TextButton.styleFrom(backgroundColor: const Color.fromARGB(255, 255, 172, 64), fixedSize: Size.fromHeight(50), maximumSize:  const Size.fromWidth(100), ),
     onPressed: () {
       print('ENVIANDO...');
-      registroUsuario();
       name.text = '';
       password.text = '';
+
     },
     child: Text(texto, style: const TextStyle(color: Colors.white),
   )

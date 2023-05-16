@@ -10,7 +10,7 @@ class FavoritosScreen extends StatelessWidget {
           title: const Text('Favoritos'),
         ),
         body: const Center(
-          child: Text('Hello World!'),
+          child: Text('Favoritos'),
         ),
     );
   }

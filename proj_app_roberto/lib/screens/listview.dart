@@ -9,7 +9,7 @@ class ListViewScreen extends StatelessWidget {
     return Scaffold(
 //      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       appBar: AppBar(
-        title: const Text('¿Qué necesitas?'),
+        title: const Text('Busca Pamplona'),
       ),
       body: Center(
         child: ListView(
@@ -17,6 +17,7 @@ class ListViewScreen extends StatelessWidget {
             ListItemWidget(icon: Icon(Icons.sports_bar, color: Color.fromARGB(255, 255, 205, 140)), text: 'Bares', link: ListDataScreen(pageName: 'bares', text: 'Bares')),
             ListItemWidget(icon: Icon(Icons.local_hotel_rounded, color: Color.fromARGB(255, 255, 205, 140)), text: 'Hoteles', link:ListDataScreen(pageName: 'hoteles', text: 'Hoteles')),
             ListItemWidget(icon: Icon(Icons.local_restaurant_rounded, color: Color.fromARGB(255, 255, 205, 140)), text: 'Restaurantes', link:ListDataScreen(pageName: 'restaurantes', text: 'Restaurantes')),
+            ListItemWidget(icon: Icon(Icons.storefront_outlined, color: Color.fromARGB(255, 255, 205, 140)), text: 'Supermercados', link:ListDataScreen(pageName: 'supermercados', text: 'Supermercados')),
           ],
         ),
         

@@ -112,7 +112,7 @@
             "nombre":"Restaurante Alma de Pamplona",
             "direccion":"C. Beloso Bajo, 11, 31006 Pamplona, Navarra",
             "descripcion":"Pinchos, menús y helados en una desenfadada tasca con kupelas y una gran lámpara hecha con botellas de sidra.",
-            "img":"restaurantes/chezBelagua.jpg",
+            "img":"restaurantes/alma.jpg",
             "latitud":"42.81722699107794",
             "longitud":"-1.641793123856665"
         },
@@ -147,6 +147,32 @@
             "img":"restaurantes/fogoneta.jpg",
             "latitud":"42.81074983479285",
             "longitud":"-1.6389326306428773"
+        }
+    ],
+    "supermercados":[
+        {
+            "nombre":"BM Supermercados",
+            "direccion":"C. de Tafalla, 13, 15, 31004 Pamplona, Navarra",
+            "descripcion":"Supermercado BM en Segundo Ensanche, Pamplona",
+            "img":"supermercados/bm_ensanche.jpg",
+            "latitud":"42.81279800218235",
+            "longitud":"-1.6359027834976994"
+        },
+        {
+            "nombre":"Mercadona",
+            "direccion":"Pl. Leonor de Trastámara, s/n, 31007 Pamplona",
+            "descripcion":"Mercadona cerca de La Ciudadela, Pamplona",
+            "img":"supermercados/mercadona_iturrama.jpg",
+            "latitud":"42.81000349151309",
+            "longitud":"-1.6541682695569078"
+        },
+        {
+            "nombre":"Supermercados Dia",
+            "direccion":"Av. de Sancho el Fuerte, 26, 31008 Pamplona, Navarra",
+            "descripcion":"Alimentación, bebidas, droguería y perfumería en supermercados con productos propios y de primeras marcas.",
+            "img":"supermercados/dia.jpg",
+            "latitud":"42.812269261356455",
+            "longitud":"-1.6588377322112466"
         }
     ]
 }
